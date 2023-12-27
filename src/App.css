@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Maison Neue', sans-serif;
+    src: url(./assets/fonts/FontsFree-Net-Maison-Neue-Bold.ttf);
+}
+
+ body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transform: translateX(none);
+    font-family: 'Maison Neue', sans-serif;
+}
+.container{
+    max-width: 1286px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}

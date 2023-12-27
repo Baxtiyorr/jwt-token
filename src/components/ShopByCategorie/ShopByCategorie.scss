@@ -1,0 +1,24 @@
+.title{
+    text-align: right;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+}
+.card{
+    max-width: 213px;
+}
+.card h3{
+    text-align: right;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 400;
+    font-optical-sizing: 14px;
+    line-height: 20px;
+}
+.card-wrapper{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin-bottom: 90px;
+
+}

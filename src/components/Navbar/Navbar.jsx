@@ -7,11 +7,17 @@ import logo from '../../assets//icons/Logo-1.svg'
 import h_outfit from '../../assets/images/Frame1.jpg'
 import sweaters from '../../assets/images/Frame3.jpg'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import AjaxCart from '../Ajax-cart/Ajaxcart';
 
 
 const Navbar = () => {
 
-  const [deactiv, setDeactive] = useState('')
+  const [navsShow, setNavShow] = useState(false);
+
+  const handleShow = () => setNavShow(true);
+
+  const [deactiv, setDeactive] = useState('display')
   
   const toggleModal = ()=>{
       if(deactiv){
@@ -35,13 +41,13 @@ const Navbar = () => {
             <li><a href="#" className='navbar__menu-link'>Women</a></li>
             <li><a href="#" className='navbar__menu-link'>Men</a></li>
             <li><a href="#" className='navbar__menu-link'>About</a></li>
-            <li><a href="#" className='navbar__menu-link'>Everworld Stories</a></li>
+            <li><Link to={'/Listing'} className='navbar__menu-link'>Everworld Stories</Link></li>
           </ul>
           <a href="/"><img src={logo} alt="Everlane" /></a>
           <div className='icons'>
             <IoSearch size={19}/>
             <GoPerson size={19}/>
-            <FiShoppingCart size={19}/>
+            <FiShoppingCart size={19} onClick={handleShow}/>
           </div>
         </div>
         
@@ -92,6 +98,7 @@ const Navbar = () => {
                 <img src={h_outfit} alt="outfit" />
                 <img src={sweaters} alt="sweaters" />
               </div>
+              <AjaxCart navShow={navsShow}/>
     </div>
   
   )
